@@ -1,0 +1,16 @@
+{
+  "name": "lab_db",
+  "version": "1.0.0",
+  "description": "Second laboratory, focused on asyncronous functions and database maangement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lisa Giacobazzi",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
