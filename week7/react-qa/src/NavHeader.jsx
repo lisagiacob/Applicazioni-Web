@@ -1,19 +1,19 @@
-import {Container, NavBar} from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-function NavHeader(props) {
-	return(
-		<NavBar bg='primary' data-bs-theme='dark'>
-			<Container fluid > /* full with container spanning the entire view*/
-				<NavBar.Brand> HeapOverrun - Question {props.qustionNum}</NavBar.Brand>
-			</Container>
-		</NavBar>
-	)
+function NavHeader (props) {
+  return(
+    <Navbar bg='primary' data-bs-theme='dark'>
+      <Container fluid>
+        <Navbar.Brand>HeapOverrun - Question {props.questionNum}</Navbar.Brand>
+      </Container>
+    </Navbar>
+  );
 }
 
 //Best practice ma non necessario
 NavHeader.propTypes = {
-	questionNum: PropTypes.number
-}
+  questionNum: PropTypes.number
+};
 
 export default NavHeader;
