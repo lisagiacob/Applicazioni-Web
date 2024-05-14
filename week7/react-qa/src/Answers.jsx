@@ -1,4 +1,4 @@
-import { Table } from "react-bootstrap";
+import { Row, Col, Table, Button } from "react-bootstrap";
 
 function Answers(props){
 	return(
@@ -29,7 +29,7 @@ function AnswerTable(props){
 			</thead>
 			<tbody>
 				{/* Facciamo un map per avere tante righe quante risposte */}
-				{props.answers.map((ans) => <AnswerRow answer={ans} key={answer.id}/>)}
+				{props.answers.map((ans) => <AnswerRow answer={ans} key={ans.id}/>)}
 			</tbody>
 		</Table>
 	)
