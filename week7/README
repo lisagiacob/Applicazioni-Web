@@ -1,0 +1,10 @@
+Commands used: 
+npm create vite@latest react-qa
+	React
+	JavaScript
+cd react-qa
+npm i
+npm run dev //controllo funzioni -> deve uscire la schermata iniziale di vite
+npm i dayjs bootstrap react-bootstrap
+
+svuoto i file .css in modo che non influenzino bootstrap e il metodo App di App.jsx perchè dovrò scriverlo io.
