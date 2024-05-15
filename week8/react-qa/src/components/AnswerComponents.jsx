@@ -1,5 +1,6 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Row, Col, Table, Button } from "react-bootstrap";
+import FormAnswers from './FormAnswers';
 
 function Answers(props){
 	return(
@@ -10,6 +11,8 @@ function Answers(props){
 		<Row>
 			<Col lg={10} className='mx-auto'> {/* larghezza 10 e mx-auto: centrata */}
 				<AnswerTable answers={props.answers} voteUp={props.voteUp}></AnswerTable>
+				{/* Il form deve stare sotto alla tabella */}
+				<FormAnswers/>
 			</Col>
 		</Row>
 		</>
