@@ -1,3 +1,4 @@
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Row, Col, Table, Button } from "react-bootstrap";
 
 function Answers(props){
@@ -8,7 +9,7 @@ function Answers(props){
 		</Row>
 		<Row>
 			<Col lg={10} className='mx-auto'> {/* larghezza 10 e mx-auto: centrata */}
-				<AnswerTable answers={props.answers}></AnswerTable>
+				<AnswerTable answers={props.answers} voteUp={props.voteUp}></AnswerTable>
 			</Col>
 		</Row>
 		</>
@@ -29,7 +30,7 @@ function AnswerTable(props){
 			</thead>
 			<tbody>
 				{/* Facciamo un map per avere tante righe quante risposte */}
-				{props.answers.map((ans) => <AnswerRow answer={ans} key={ans.id}/>)}
+				{props.answers.map((ans) => <AnswerRow answer={ans} key={ans.id} voteUp={props.voteUp}/>)}
 			</tbody>
 		</Table>
 	)
@@ -39,7 +40,7 @@ function AnswerRow(props){
 	return(
 		<tr>
 			<AnswerData answer={props.answer}/>
-			<AnswerAction />
+			<AnswerAction answerId = {props.answer.id} voteUp = {props.voteUp}/>
 		</tr>
 	)
 }
@@ -55,12 +56,12 @@ function AnswerData(props){
 	)
 }
 
-function AnswerAction(){
+function AnswerAction(props){
 	return(
 		<td>
-			<Button variant='warning'> vote up </Button>
-			<Button variant='primary'> edit </Button>
-			<Button variant='danger'> delete </Button>
+			<Button variant='warning' onClick={() => props.voteUp(props.answerId)}><i className='bi bi-arrow-up'></i></Button>
+    		<Button variant='primary' className='mx-1'><i className='bi bi-pencil-square'></i></Button> 
+    		<Button variant='danger'><i className='bi bi-trash'></i></Button>
 		</td>
 	)
 }
