@@ -4,7 +4,9 @@ npm create vite@latest react-qa
 	JavaScript
 cd react-qa
 npm i
-npm run dev //controllo funzioni -> deve uscire la schermata iniziale di vite
-npm i dayjs bootstrap react-bootstrap
+npm run dev //controllo funzioni -> deve uscire la schermata iniziale di vite - ctrl-C per stoppare
+npm i dayjs bootstrap react-bootstrap bootstrap-icons
 
 svuoto i file .css in modo che non influenzino bootstrap e il metodo App di App.jsx perchè dovrò scriverlo io.
+
+npm run dev //runnare la pagina
