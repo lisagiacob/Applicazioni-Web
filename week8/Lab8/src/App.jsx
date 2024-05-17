@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
 function App() {
 
     // Esempio di dati dei film
-    const films = [
+    let films = [
         { id: 1, title: "Film 1", rating: 4.5, favorite: true, lastSeen: dayjs('2023-04-15'), seen: true },
         { id: 2, title: "Film 2", rating: 3.0, favorite: false, lastSeen: dayjs('2023-04-01'), seen: true },
         { id: 3, title: "Film 3", rating: 5.0, favorite: true, lastSeen: dayjs('2023-05-01'), seen: false },
