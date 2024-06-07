@@ -63,8 +63,8 @@ function AnswerAction(props){
 	return(
 		<td>
 			<Button variant='warning' onClick={() => props.voteUp(props.answerId)}><i className='bi bi-arrow-up'></i></Button>
-    		<Button variant='primary' className='mx-1'><i className='bi bi-pencil-square'></i></Button> 
-    		<Button variant='danger'><i className='bi bi-trash'></i></Button>
+    			<Button variant='primary' className='mx-1'><i className='bi bi-pencil-square'></i></Button> 
+    			<Button variant='danger'><i className='bi bi-trash'></i></Button>
 		</td>
 	)
 }
